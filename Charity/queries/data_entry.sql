@@ -24,5 +24,3 @@ WHERE country = 'Denmark';
 UPDATE donor
 set paid_status =2
 where id=1;
-
-SELECT*from donor;

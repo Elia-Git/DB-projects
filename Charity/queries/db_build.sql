@@ -32,7 +32,7 @@ values('Member'),
 ('Representative'),
 ('Board');
 
-
+--// Table donation
 
 CREATE TABLE donation (
   id INT IDENTITY(1,1) PRIMARY KEY,
@@ -53,20 +53,6 @@ CREATE TABLE donor (
   FOREIGN KEY (paid_status) REFERENCES payment_status(id),
 FOREIGN KEY (role_id) REFERENCES role(id)
 );
-
---// Recipient's table
-
-CREATE TABLE recipient (
-  id INT IDENTITY(1,1) PRIMARY KEY,
-  name VARCHAR(255) NOT NULL,
-  country VARCHAR(255) NOT NULL,
-  is_alive VARCHAR(3) NOT NULL,
-  donated_as INT NOT NULL,
-  paid_status INT NOT NULL,
-  FOREIGN KEY (donated_as) REFERENCES donated_as(id),
-  FOREIGN KEY (paid_status) REFERENCES payment_status(id)
-);
-
 -- Donation table
 CREATE TABLE donation (
   id INT PRIMARY KEY,
