@@ -29,7 +29,6 @@ drop TABLE Permissions;
 CREATE TABLE Permissions (
   PermissionID INT IDENTITY(1,1) PRIMARY KEY,
   RoleID INT,
-  TableName VARCHAR(50),
   CanView BIT,
   CanEdit BIT,
   CanDelete BIT,
