@@ -22,9 +22,12 @@ CREATE TABLE Students (
   ContactInfo VARCHAR(50),
   AdmissionYear INT
 );
+
+drop TABLE Permissions;
+
 -- Create the Permissions table
 CREATE TABLE Permissions (
-  PermissionID INT PRIMARY KEY,
+  PermissionID INT IDENTITY(1,1) PRIMARY KEY,
   RoleID INT,
   TableName VARCHAR(50),
   CanView BIT,
