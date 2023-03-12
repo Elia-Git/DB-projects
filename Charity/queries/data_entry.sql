@@ -4,8 +4,8 @@ INSERT into recipient(name,donation_id,type_id)
 values ('name','3','1');
 --// Inserting new donor
 INSERT into donor(id,name,country,phone,holiday_id,paid_status,role_id)
-values (117, 'Tekie Tesfahiwet','USA', null,3,1,1),
-(118, 'Werqu Tesfay','USA',null,3,1,1);
+values (117, 'fullname','USA', null,3,1,1);
+
 
 select*from donor_view;
 select*from donor;
